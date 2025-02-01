@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkvicmms_site"]=self["webpackChunkvicmms_site"]||[]).push([[838],{5838:function(t,s,n){n.r(s),n.d(s,{default:function(){return a}});var e=function(){var t=this,s=t._self._c;return s("div",{staticClass:"text-xl"},[t._v(" Contact ")])},u=[],l={},c=l,i=n(1656),r=(0,i.A)(c,e,u,!1,null,null,null),a=r.exports}}]);
-//# sourceMappingURL=838.91173245.js.map
