@@ -42,13 +42,21 @@ export const PROJECTS = [
     },
     {
         key: 'sct',
-        title: 'Secretarría de Caminos y Transportes',
+        title: 'Secretaría de Comunicaciones y Transportes',
         short_description: `
-            
+            Migración del sistema de Secretarría de Comunicaciones y Transportes basado en Progress, a una nueva aplicación web, aplicando una reingenieria 
+            a más de 20 módulos existentes.
         `,
-        description: 'Description of project 1',
+        description: `
+            Proyecto de reingeniería para migrar el sistema en Progress de la Secretaría de Comunicaciones y Transportes del gobierno de México. 
+            Se trabajó especificamente sobre los módulos relacionados con la Secretaría de Administración de Obra Pública en donde se crearon más de 15 catálogos 
+            y 20 módulos enfocados a la gestión de proyectos federales.
+        `,
         image: new URL('@/assets/images/projects/sct.gif', import.meta.url).href,
-        link: 'https://example.com/project1',
+        site: {
+            link: '',
+            demo: new URL('@/assets/demos/sct.mp4', import.meta.url).href,
+        },
         stack: ['vue', 'ts', 'sass']
     },
     {
@@ -57,9 +65,16 @@ export const PROJECTS = [
         short_description: `Tomando como base un proyecto existente, se realizo un rediseño de la interfaz con el fin de 
             mejorar la experiencia de los usuarios. Para este proyecto además se actualizó la versión de vuetify de la 1.5 a la 2.6.
         `,
-        description: 'Description of project 4',
+        description: `
+            Se desarrolló una actualización de diseño de un proyecto existente desarrollado con Vue2, tomando como base un mockup proporcionado en figma.
+            Para esta actualización fue necesario actualizar la version de vuetify de la 1.5 a la 2.6 por lo que además se actualizaron dependencias
+            y componentes existentes. El rediseño fue enfocado principalmente a dispositivos móviles.
+        `,
         image: new URL('@/assets/images/projects/webapp.gif', import.meta.url).href,
-        link: 'https://example.com/project1',
+        site: {
+            link: '',
+            demo: new URL('@/assets/demos/webapp.mp4', import.meta.url).href,
+        },
         stack: ['vue', 'js', 'figma']
     },
     {
@@ -68,9 +83,15 @@ export const PROJECTS = [
         short_description: `Dado un chat empresarial existente, se realizo un rediseño de la interfaz con el fin de mejorar la experiencia de los usuarios. 
             El nuevo diseño se presento primero con mockups realizados en figma para posteriormente implementar la interfaz gráfica.
         `,
-        description: 'Description of project 1',
+        description: `Para este proyecto se planteó como reto realizar una propuesta de diseño para renovar la interfaz de un chat empresarial existente.
+            Se realizó una propuesta como mockup en figma y una vez aceptada se continuó con el desarrollo de la interfaz gráfica. Proyecto realizado como Freelancer.
+        `,
         image: new URL('@/assets/images/projects/chat.gif', import.meta.url).href,
-        link: 'https://example.com/project1',
+        site: {
+            link: 'https://vicmms.github.io/chat-design-vue/',
+            demo: '',
+        },
+        repo: 'https://github.com/vicmms/chat-design-vue',
         stack: ['vue', 'js', 'sass', 'figma']
     },
     {
@@ -79,9 +100,17 @@ export const PROJECTS = [
         short_description: `Panel de control para empresa de construcción para la gestión de empleados, proyectos y clientes,
             así como la generación de reportes relacionados con los pagos, fichajes de entrada y salida de empleados y avance de obras.
         `,
-        description: 'Description of project 1',
+        description: `
+            Proyecto como freelancer que consta de un panel de control para empresa de construcción para la gestión de empleados, proyectos y clientes.
+            Dentro del panel se pueden generar reportes generales, conceptos de obra y bitácoras de entrada y salida de empleados y exportar la información a excel.
+            Para este proyecto se desarrolló una API con Laravel.
+        `,
         image: new URL('@/assets/images/projects/constructora.gif', import.meta.url).href,
-        link: 'https://example.com/project1',
+        site: {
+            link: '',
+            demo: new URL('@/assets/demos/constructora.mp4', import.meta.url).href,
+        },
+        repo: 'https://github.com/codetives/constructora',
         stack: ['vue', 'js', 'laravel']
     },
 ]

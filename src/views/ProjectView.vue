@@ -16,7 +16,7 @@
                     </div>
                     <div class="tooltip">
                         <div class="btn primary btn-link text-center flex justify-center"
-                            :class="{ disabled: !project.repo }" @click="openNewTab(projectrepo)">
+                            :class="{ disabled: !project.repo }" @click="openNewTab(project.repo)">
                             <img src="@/assets/images/gh.png" alt="">
                             <span v-if="!project.repo" class="tooltiptext">Proyecto privado</span>
                         </div>

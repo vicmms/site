@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="text-3xl">¡Pongamonos en contacto!</div>
-        <div class="flex justify-center items-center cursor-pointer py-10">
+        <a class="flex justify-center items-center cursor-pointer py-10" href="mailto:victormmsauz@gmail.com">
             <div class="text-2xl md:text-5xl pixel-text">victormmsauz@gmail.com</div>
             <img class="w-[40px] h-[40px] mx-2 mt-2" src="@/assets/images/open_new.png" alt="">
-        </div>
+        </a>
         <div class="py-3 text-xl">También puedes descagrgar mi CV para conocer más de mi carrera profesional</div>
         <div class="flex justify-center items-center cursor-pointer mt-3">
             <div class="cv-btn flex justify-center items-center mb-10">
