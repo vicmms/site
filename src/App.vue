@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav> -->
     <router-view />
   </div>
 </template>
@@ -13,7 +9,7 @@
   --primary-color: #ff3aa4;
   --secondary-color: #03051f;
   --custom-grey: #cacaca;
-  --contrast: #72beff;
+  --contrast: #53beff;
 }
 
 #app {
@@ -42,6 +38,10 @@ body {
 
 .pixel-text {
   font-family: Pixelify Sans;
+}
+
+.pixel-text-alt {
+  font-family: VT323;
 }
 
 .custom-grey {
@@ -181,5 +181,45 @@ nav a.router-link-exact-active {
 /* Hover sobre la barra */
 ::-webkit-scrollbar-thumb:hover {
   background: white;
+}
+
+.carousel-container {
+    img {
+        object-fit: cover;
+        height: inherit;
+    }
+    .next,
+    .prev {
+        color: white !important;
+        span {
+            text-shadow:
+                -2px -2px 10px var(--secondary-color),
+                2px -2px 10px var(--secondary-color),
+                -2px 2px 10px var(--secondary-color),
+                2px 2px 10px var(--secondary-color);
+        }
+    }
+}
+.lang-container {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  font-family: Pixelify Sans, VT323;
+  div {
+    padding: 3px 15px;
+    background-color: #a6a6a6;
+    color: var(--secondary-color);
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--contrast);
+      transform: scale(1.1);
+    }
+  }
+  .active {
+    background-color: var(--contrast);
+    transform: scale(1.1);
+  }
 }
 </style>

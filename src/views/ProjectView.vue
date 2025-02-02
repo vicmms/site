@@ -1,24 +1,26 @@
 <template>
-    <div class="mt-[10%]">
+    <div class="mt-[5%]">
+        <div class="ml-4 flex justify-end mb-5">
+            <div class="btn secondary btn-link font-bold" @click="$router.push({ name: 'home' })">X</div>
+        </div>
         <div class="px-10">
-            <ImageCarrousel :images="images" />
+            <ImageCarousel :images="images" />
         </div>
         <div class="flex flex-col justify-center items-center px-4">
-            <div class="text-6xl pixel-text primary-text py-4">{{ project.title }}</div>
-            <div class="text-2xl py-2 project-description">{{ project.description }}</div>
+            <div class="text-6xl pixel-text primary-text py-4">{{ $t(`projects.${project.key}.title`) }}</div>
+            <div class="text-2xl py-2 project-description">{{ $t(`projects.${project.key}.description`) }}</div>
             <div class="flex flex-col md:flex-row items-center mt-10 justify-between w-full px-[10%] mb-10">
                 <div class="flex flex-col md:flex-row">
-                    <div class="btn secondary btn-link" @click="$router.push({ name: 'home' })">Regresar</div>
                     <div class="tooltip">
                         <div class="btn primary btn-link" :class="{ disabled: !project.site }"
-                            @click="openNewTab(project.site.link, project.site.demo)">Ver sitio</div>
-                        <span v-if="!project.site" class="tooltiptext">Sitio privado</span>
+                            @click="openNewTab(project.site.link, project.site.demo)">{{ $t(`actions.visit_site`) }}</div>
+                        <span v-if="!project.site" class="tooltiptext">{{ $t(`actions.private_site`) }}</span>
                     </div>
                     <div class="tooltip">
                         <div class="btn primary btn-link text-center flex justify-center"
                             :class="{ disabled: !project.repo }" @click="openNewTab(project.repo)">
                             <img src="@/assets/images/gh.png" alt="">
-                            <span v-if="!project.repo" class="tooltiptext">Proyecto privado</span>
+                            <span v-if="!project.repo" class="tooltiptext">{{ $t(`actions.private_project`) }}</span>
                         </div>
                     </div>
                 </div>
@@ -43,7 +45,7 @@ export default {
         }
     },
     components: {
-        ImageCarrousel: () => import('@/components/ImageCarrousel.vue'),
+        ImageCarousel: () => import('@/components/ImageCarousel.vue'),
         StackItem: () => import('@/components/StackItem.vue')
     },
     methods: {

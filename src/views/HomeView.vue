@@ -1,8 +1,16 @@
 <template>
     <div class="container mx-auto h-screen">
+        <div class="flex lang-container">
+            <div :class="{active: $i18n.locale == 'es'}" @click="$i18n.locale='es'">
+                Es
+            </div>
+            <div :class="{active: $i18n.locale == 'en'}" @click="$i18n.locale='en'">
+                En
+            </div>
+        </div>
         <div class="flex flex-col items-start md:items-center mt-[10%] px-4 md:px-0 pb-20">
             <div class="pixel-text primary-text text-7xl">Victor Morales</div>
-            <div class="primary-text text-3xl pt-4">Desarrollador Web</div>
+            <div class="primary-text text-3xl pt-4">{{ $t('app.web_developer')}}</div>
             <div class="mt-[5%] mb-8 pixel-text text-white text-5xl section-title flex justify-start w-full">{{
                 sectionTitle }}</div>
             <div class="flex flex-col md:flex-row w-full">
@@ -40,15 +48,15 @@ export default {
             SECTIONS: {
                 PROJECTS: {
                     name: 'ProjectsComponent',
-                    title: 'Proyectos'
+                    title: this.$t('app.projects')
                 },
                 ME: {
                     name: 'MeComponent',
-                    title: 'Sobre mi'
+                    title: this.$t('app.me')
                 },
                 CONTACT: {
                     name: 'ContactComponent',
-                    title: 'Contacto'
+                    title: this.$t('app.contact')
                 }
             },
             currentSection: {},
